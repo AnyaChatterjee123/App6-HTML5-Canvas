@@ -39,10 +39,16 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
+/*
+For canvas coordinates, the coordinate 0, 0 is at the upper left corner of the canvas 
+X values increase as you go right on the canvas (right along the x-axis)
+Y values increase as you go down on the canvas (down the y-axis)
+*/	
+	
 function draw_a() {
 	var a_canvas = document.getElementById("a");
 	var a_context = a_canvas.getContext("2d");
-	a_context.fillRect(120, 60, 200, 100); }
+	a_context.fillRect(120, 60, 200, 100); } // The rectangle is bounded by its upper left corner (120, 60), width (200), and height (100)
 	
 /*
 I added the function "draw_a()", when the function is called a rectangle is drawn on the canvas with the id "a"
