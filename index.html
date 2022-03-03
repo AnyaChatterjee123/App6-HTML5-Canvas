@@ -45,11 +45,12 @@ function draw_a() {
 	a_context.fillRect(80, 20, 100, 50); }
 	
 /*
-I added the function "draw_a()," when the function is called a rectangle is drawn on the canvas with the id "a"
+I added the function "draw_a()", when the function is called a rectangle is drawn on the canvas with the id "a"
 "var a_canvas" finds the <canvas> element with the id "a" by using "document.getElementById"
 Once the <canvas> element is found, "getContext()" is called and I have to pass "2d" through "getContext()"
+
 "fillRect()" is then run and draws a filled rectangle with the default fillStyle (black)
-(x, y, width, height) is passed through "fillRect()"
+"x, y, width, height" is passed through "fillRect()"
 */
 
 function draw_b() {
@@ -59,10 +60,30 @@ function draw_b() {
 	b_context.fillText("Anya", 5, 10); }
 	
 /*
-I added the function "draw_b()," when the function is called text is drawn on the canvas with the id "a"
+I added the function "draw_b()", when the function is called text is drawn on the canvas with the id "a"
 "var b_canvas" finds the <canvas> element with the id "a" by using "document.getElementById"
 Once the <canvas> element is found, "getContext()" is called and I have to pass "2d" through "getContext()"
-"fillText()" is then run and draws the text "Anya" (("Anya") is passed through "fillText()") with the coordinates (5, 10)
+
+"fillText()" is then run and draws the text "Anya" with the coordinates (5, 10)
+"Anya" is passed through "fillText()"
+*/
+	
+function draw_c() {
+	var c_canvas = document.getElementById("a");
+	var c_context = c_canvas.getContext("2d");
+	var dog = new Image ();
+	dog.src = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=0.672xw:1.00xh;0.166xw,0&resize=640:*"
+	c_context.drawImage(dog, 0, 10, 30, 40); }
+	
+/*
+I added the function "draw_c()," when the function is called the image is drawn on the canvas with the id "a"
+"var c_canvas" finds the <canvas> element with the id "a" by using "document.getElementById"
+Once the <canvas> element is found, "getContext()" is called and I have to pass "2d" through "getContext()"
+
+With "var dog = new Image()", I am creating a new image element with the variable name "dog"
+With "dog.src = URL", I am setting the path to my image source with a URL
+"drawImage()" is then run and draws the image element associated with the variable "dog" on the canvas with the id "a"
+0 (dx), 10 (dy), 30 (dw, width), 40 (dh, height) is passed through "drawImage()"
 */
 	
 </script>
@@ -116,10 +137,13 @@ This button runs the function "draw_a()" and draws a filled black rectangle
 <div id="content" class="w3-container">
 	<button class="w3-button w3-black" onclick="draw_b()">My Name</button>
 </div>
+	
 <!--
 I created a button so that it runs the function "draw_b()" when you click on it ("onclick")
 This button runs the function "draw_b()" and draws the text "Anya"
 -->
 
+	
+	
 </body>
 </html>
