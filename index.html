@@ -38,9 +38,22 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+
+function draw_a() {
+	var a_canvas = document.getElementById("a");
+	var a_context = a_canvas.getContext("2d");
+	a_context.fillRect(50, 25, 150, 100);
+}
+	
+/*
+I added the function draw_a(). When the function is called, a rectangle is drawn. 
+var a_canvas finds the <canvas> element with the id "a" by using document.getElementById
+Once the <canvas> element is found, getContext() is called and I have to pass "2d" through getContext()
+fillRect draws a filled rectangle with the default fillStyle (black)
+(x, y, width, height) are passed through fillRect()
+*/
+	
 </script>
-
-
 
 <style>	
 .body {
@@ -75,11 +88,10 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 	
 <canvas id="a" width="300" height="225"></canvas>
-var a_canvas = document.getElementById("a");
 
 <!--
 I added a <canvas> element
-I gave the canvas an id attribute (document.getElementById("a"))
+I gave the canvas an id attribute ("a")
 -->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
