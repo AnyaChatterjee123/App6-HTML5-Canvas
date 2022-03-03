@@ -46,11 +46,24 @@ function draw_a() {
 }
 	
 /*
-I added the function "draw_a()," when the function is called a rectangle is drawn
-"var a_canvas" finds the <canvas> element with the id "a" by using document.getElementById
+I added the function "draw_a()," when the function is called a rectangle is drawn on the canvas with the id "a"
+"var a_canvas" finds the <canvas> element with the id "a" by using "document.getElementById"
 Once the <canvas> element is found, "getContext()" is called and I have to pass "2d" through "getContext()"
-"fillRect()" draws a filled rectangle with the default fillStyle (black)
-(x, y, width, height) are passed through "fillRect()"
+"fillRect()" is then run and draws a filled rectangle with the default fillStyle (black)
+(x, y, width, height) is passed through "fillRect()"
+*/
+
+function draw_b() {
+	var b_canvas = document.getElementById("a");
+	var b_context = b_canvas.getContext("2d");
+	context.font = "10px Arial";
+	context.fillText("Anya", 5, 10)
+	
+/*
+I added the function "draw_b()," when the function is called text is drawn on the canvas with the id "a"
+"var b_canvas" finds the <canvas> element with the id "a" by using "document.getElementById"
+Once the <canvas> element is found, "getContext()" is called and I have to pass "2d" through "getContext()"
+"fillText()" is then run and draws the text "Anya" (("Anya") is passed through "fillText()") with the coordinates (5, 10)
 */
 	
 </script>
@@ -98,6 +111,19 @@ Once the <canvas> element is found, "getContext()" is called and I have to pass 
 I added a <canvas> element with a border
 I gave the canvas an id attribute ("a")
 I created a button so that it runs the function "draw_a()" when you click on it ("onclick")
+This button runs the function "draw_a()" and draws a filled black rectangle 
+-->
+	
+<div id="content" class="w3-container">
+	<button class="w3-button w3-black" onclick="draw_b()">My Name</button>
+</div>
+	
+<div id="content" class="w3-container">
+	<button class="w3-button w3-black" onclick="draw_b()">My Name</button>
+</div>
+<!--
+I created a button so that it runs the function "draw_b()" when you click on it ("onclick")
+This button runs the function "draw_b()" and draws the text "Anya"
 -->
 
 </body>
