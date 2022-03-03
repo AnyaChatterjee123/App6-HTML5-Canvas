@@ -42,7 +42,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 function draw_a() {
 	var a_canvas = document.getElementById("a");
 	var a_context = a_canvas.getContext("2d");
-	a_context.fillRect(50, 25, 200, 100);
+	a_context.fillRect(10, 5, 100, 50);
 }
 	
 /*
@@ -88,7 +88,7 @@ Once the <canvas> element is found, "getContext()" is called and I have to pass 
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </div>
 
-<canvas id="a" width="200" height="100" style="border:1px solid #000000;"></canvas>
+<canvas id="a" width="100" height="50" style="border:1px solid #000000;"></canvas>
 	
 <div id="content" class="w3-container">
 	<button class="w3-button w3-black" onclick="draw_a()">Rectangle</button>
