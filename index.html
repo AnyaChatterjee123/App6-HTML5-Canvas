@@ -92,6 +92,18 @@ With "dog.src = URL", I am setting the path to my image source with a URL
 0 (dx), 10 (dy), 30 (dw, width), 40 (dh, height) is passed through "drawImage()"
 */
 	
+function remove() {
+	var a_canvas = document.getElementById("a")
+	a_canvas.width = a_canvas.width; }
+	
+/*
+I added the function "remove()" to set the width of the canvas element with the id "a", removing the canvas's contents and ressetting the default properties of its drawing context 
+	Similarly, this function will execute the same task if we set the height of the canvas element with the id "a"
+	Setting either the height or the width of the <canvas> element will both work in removing a canvas's contents and resettting the default properties of its drawing context 
+"var a_canvas" finds the <canvas> element with the id "a" by using "document.getElementById"
+When the function is run, it removes all the contents of the canvas and resets the canvas's default drawing context properties 
+*/
+
 </script>
 
 <style>	
