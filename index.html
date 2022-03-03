@@ -46,7 +46,7 @@ function draw_a() {
 }
 	
 /*
-I added the function "draw_a()." When the function is called, a rectangle is drawn
+I added the function "draw_a()," when the function is called a rectangle is drawn
 "var a_canvas" finds the <canvas> element with the id "a" by using document.getElementById
 Once the <canvas> element is found, "getContext()" is called and I have to pass "2d" through "getContext()"
 "fillRect()" draws a filled rectangle with the default fillStyle (black)
@@ -88,9 +88,10 @@ Once the <canvas> element is found, "getContext()" is called and I have to pass 
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </div>
 
+<canvas id="a" width="300" height="225"></canvas>
+	
 <div id="content" class="w3-container">
-	<button class="w3-button w3-black" onclick="draw_a()">Calculate</button>
-	<canvas id="a" width="300" height="225"></canvas>
+	<button class="w3-button w3-black" onclick="draw_a()">Rectangle</button>
 </div>
 
 <!--
